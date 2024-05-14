@@ -43,44 +43,49 @@
 
 
 
-    <Button
+    <ImageView
         android:id="@+id/boton1"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_white_shape"
+        android:layout_marginTop="41dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"
-        android:layout_marginStart="9dp"/>
+        android:layout_marginStart="10dp"/>
 
-    <Button
+    <ImageView
         android:id="@+id/boton2"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_black_shape"
         app:layout_constraintStart_toEndOf="@+id/boton1"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="10dp"
         />
 
-    <Button
+    <ImageView
         android:id="@+id/boton3"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_white_shape"
         app:layout_constraintStart_toEndOf="@+id/boton2"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="10dp"
         />
 
-    <Button
+    <ImageView
         android:id="@+id/boton4"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_orange_shape"
         app:layout_constraintStart_toEndOf="@+id/boton3"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="10dp"
         />
+
 
     <TextView
         android:id="@+id/textView"
@@ -89,7 +94,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="90dp"
         android:text="Adoptame"
-        android:textColor="@color/black"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/naranja"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ProyectoGrupal"
         tools:targetApi="31">
         <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".Perritos"
             android:exported="false" />
         <activity

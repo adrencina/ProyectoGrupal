@@ -1,5 +1,6 @@
 package com.example.proyectogrupal
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,10 @@ class Home : AppCompatActivity() {
         }
 
         initRecyclerView()
+        initNavigation()
     }
+
+
 
 
     private fun initRecyclerView() {
@@ -43,5 +47,14 @@ class Home : AppCompatActivity() {
             HomeData(url = "https://s3-alpha-sig.figma.com/img/e127/bfbd/787c0fea89d31aae014da75a508c6b25?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SvcydwKzPQYiNWwFnStPL-N36MCDZszUZL7arQ~Los5X6JxtRX~5oYPUNMrwlGT0LXSoV1Zus6zl5sefzH2AnI7a1XLrpLmrUukIK7WRlPiEcqBehy4mWmgqw-6K~2D4Eef-QWMY0dZPW~LNqI~twMAis4GG4skb8Saw9kzg3pCsbeY8Bsw8Ggr40K28VP3YehuFQPFXMau1Y-8GL~0zcROrzA~t-1bakualrud~-coQal2j9E-dZCLIocMwHNPr0qrtqirPE3ksv1NvwagrXiTCJfESmHEVbwSo0rilgUi1iLKG5XHxO0ojzjgYH3cv7UtR5FFNSoV48IkeCSULgA__"),
             HomeData(url = "https://s3-alpha-sig.figma.com/img/8e73/c420/39cace682da3a536cd44cc26b6a01792?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JRXdeq0p3FHef6GslrtYGNdkCFipVxxBz~aSBW8pSlSn8Urx3leB42KYTRPUZN0AoLEE-tObM6ZisPfzwmgRpwikryGNGhIbt8-jBge1pmtuuPzCMlPgGziD7x1gJx3UwgvYuhd64QerG5zJBuz15fOSUY7XGpzEOr5R1t1l-4urkp3yCYHJl7G0w6V8xdNdd4uYq9PZZ~AK9bjtfilmY~KwLyQjP4hMhoUDJpYz1RO4~1cNUxXOwAf9Kb~ntByy1QaushzGdmN~rAxR3A5KrsoisCbompo7Is-GCLMKbuPZ9AOtDasvkXyRVjfoEiiERgcld3ntejmotjCU82Axrg__")
         )
+    }
+
+
+    //navegacion a otras interfaces
+    private fun initNavigation() {
+        binding.boton2.setOnClickListener {
+            val intentPerritos = Intent(this, Perritos::class.java)
+            startActivity(intentPerritos)
+        }
     }
 }

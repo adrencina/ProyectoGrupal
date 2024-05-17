@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blanco"
+    android:id="@+id/perritos"
     android:orientation="vertical"
     android:layout_gravity="center">
 
@@ -30,7 +31,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDogs"
         android:layout_width="321dp"
-        android:layout_height="107dp"
+        android:layout_height="0dp"
         android:layout_marginTop="190dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -38,6 +39,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:listitem="@layout/item_grid_dogs"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
         />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

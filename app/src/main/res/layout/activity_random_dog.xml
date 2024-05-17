@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanco">
@@ -21,6 +20,7 @@
         android:textColor="@color/gris_texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/titleSearch"
         android:layout_width="wrap_content"
@@ -34,6 +34,7 @@
         android:textColor="@color/naranja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/titleFriend"
         android:layout_width="wrap_content"
@@ -64,6 +65,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/icono_pata"
         android:layout_width="51dp"
         android:layout_height="54dp"
         android:layout_marginEnd="40dp"
@@ -91,27 +93,26 @@
         app:layout_constraintTop_toTopOf="@+id/dl_30" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/dl_10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/dl_90"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
-
     <Button
-        android:id="@+id/boton_red"
+        android:id="@+id/boton_der"
         android:layout_width="240dp"
-        android:layout_height="68dp"
+        android:layout_height="67dp"
         android:background="@drawable/rounded_corner_white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/dl_90"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
@@ -120,20 +121,22 @@
         android:layout_height="74dp"
         android:backgroundTint="@color/negro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/dl_10"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
     <ImageView
+        android:id="@+id/icono_boton"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/flecha_volver"
         android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/boton_red"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/boton_red" />
+        app:layout_constraintBottom_toBottomOf="@+id/boton_der"
+        app:layout_constraintEnd_toStartOf="@+id/dl_90"
+        app:layout_constraintTop_toTopOf="@+id/boton_der" />
 
     <TextView
+        android:id="@+id/texto_boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Volver"
@@ -141,7 +144,7 @@
         android:textSize="18dp"
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/boton_izq"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/dl_10"
         app:layout_constraintTop_toTopOf="@+id/boton_izq" />
 
 

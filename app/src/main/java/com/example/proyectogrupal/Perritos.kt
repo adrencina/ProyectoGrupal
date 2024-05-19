@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.proyectogrupal.databinding.ActivityPerritosBinding
+import com.example.proyectogrupal.ui.home.adapter.DogsAdapter
 
 class Perritos : AppCompatActivity() {
 

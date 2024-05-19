@@ -40,7 +40,7 @@
 
 
     <ImageView
-        android:id="@+id/boton1"
+        android:id="@+id/btn_aleatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_white_shape"
@@ -50,15 +50,15 @@
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"/>
 
     <TextView
-        android:id="@+id/text_boton1"
+        android:id="@+id/text_aleatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aleatorio"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/boton1"
-        app:layout_constraintEnd_toEndOf="@+id/boton1"
-        app:layout_constraintStart_toStartOf="@+id/boton1"
-        app:layout_constraintTop_toTopOf="@+id/boton1" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_aleatorio"
+        app:layout_constraintEnd_toEndOf="@+id/btn_aleatorio"
+        app:layout_constraintStart_toStartOf="@+id/btn_aleatorio"
+        app:layout_constraintTop_toTopOf="@+id/btn_aleatorio" />
 
     <ImageView
         android:id="@+id/boton2"
@@ -149,7 +149,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton1" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_aleatorio" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_home"
@@ -160,7 +160,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:listitem="@layout/card_img"/>
+        tools:listitem="@layout/card_img"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

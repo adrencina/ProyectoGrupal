@@ -16,7 +16,7 @@ class Home : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
-    val viewmodel by viewModels<HomeViewmodel>()
+    private val viewmodel by viewModels<HomeViewmodel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +32,27 @@ class Home : AppCompatActivity() {
         }
         call()
         observer()
+
+        binding.btnAleatorio.setOnClickListener{
+            navigation()
+        }
     }
 
-    fun call() {
+    private fun navigation(){
+        val intent = Intent(this, RandomDog::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+
+
+    private fun call() {
         viewmodel.getDogs()
     }
+
+
+
+
 
 
     private fun observer() {
@@ -56,6 +72,7 @@ class Home : AppCompatActivity() {
             }
         }
     }
+
 
     private fun initRecyclerView(list: List<String>) {
 

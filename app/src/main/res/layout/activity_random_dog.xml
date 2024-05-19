@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/random_dog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanco">
@@ -86,7 +87,7 @@
         android:id="@+id/imageView"
         android:layout_width="343dp"
         android:layout_height="443dp"
-        android:src="@drawable/rounded_corner_card"
+        android:src="@drawable/logo_pata"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -34,12 +34,43 @@ class Home : AppCompatActivity() {
         observer()
 
         binding.btnAleatorio.setOnClickListener{
-            navigation()
+            navRandomdog()
         }
+
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
+
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
+
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
+
     }
 
-    private fun navigation(){
-        val intent = Intent(this, RandomDog::class.java)
+    private fun navRandomdog(){
+        val intent = Intent(this, RandomDog::class.java) //Para ir a random_dog.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navPerritos(){
+        val intent = Intent(this, Perritos::class.java) //Para ir a perritos.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navBuscar(){
+        val intent = Intent(this, Buscar::class.java) //Para ir a Buscar.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navNosotros(){
+        val intent = Intent(this, Nosotros::class.java) //Para ir a Nosotros.xml
         startActivity(intent)
         finish()
     }

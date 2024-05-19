@@ -4,9 +4,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="naranja">#E97F01</color>
+    <color name="orange_ligth">#ffc31f</color>
     <color name="negro">#000000</color>
     <color name="blanco">#FFFFFF</color>
 
-
+    <color name="gris">#EEEEEE</color>
+    <color name="gris_texto">#838383</color>
 
 </resources>

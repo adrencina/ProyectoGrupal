@@ -32,6 +32,7 @@ class Home : AppCompatActivity() {
         }
         call()
         observer()
+        initNavigation()
     }
 
     fun call() {
@@ -64,15 +65,19 @@ class Home : AppCompatActivity() {
 
 
     }
-}
 
-//
-//
-//    //navegacion a otras interfaces
-//    private fun initNavigation() {
-//        binding.boton2.setOnClickListener {
-//            val intentPerritos = Intent(this, Perritos::class.java)
-//            startActivity(intentPerritos)
-//        }
-//    }
-//}
+
+
+    //navegacion a otras interfaces
+    private fun initNavigation() {
+        binding.boton2.setOnClickListener {
+            val intent = Intent(this, Perritos::class.java)
+            startActivity(intent)
+        }
+
+        binding.boton4.setOnClickListener {
+            val intent = Intent(this, Buscar::class.java)
+            startActivity(intent)
+        }
+    }
+}

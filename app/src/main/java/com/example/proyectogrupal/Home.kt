@@ -57,6 +57,10 @@ class Home : AppCompatActivity() {
         }
     }
 
+    fun navRandomDog(){
+        val intent = intent(this, Main)
+    }
+
     private fun initRecyclerView(list: List<String>) {
 
         val adapter = HomeAdapter(list)

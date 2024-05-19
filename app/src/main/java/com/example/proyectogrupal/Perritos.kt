@@ -26,18 +26,18 @@ class Perritos : AppCompatActivity() {
             insets
         }
 
-        initUIA()
+        //initUIA()
     }
 
-    private fun initUIA() {
+    /*private fun initUIA() {
         initRecycler()
-    }
+    }*/
 
-    private fun initRecycler() {
+   /* private fun initRecycler() {
         binding.rvPerritos.layoutManager = GridLayoutManager(this, 3)
         val adapter = DogsAdapter(getList())
         binding.rvPerritos.adapter = adapter
-    }
+    }*/
 
     private fun getList(): List<DogsData> {
         return listOf(

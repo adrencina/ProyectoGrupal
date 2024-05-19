@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.proyectogrupal.databinding.ActivityHomeBinding
 import com.example.proyectogrupal.ui.home.adapter.HomeAdapter
 import com.example.proyectogrupal.ui.home.viewmodel.HomeViewmodel
+import com.example.proyectogrupal.ui.home.viewmodel.State
 
 class Home : AppCompatActivity() {
 
@@ -30,35 +31,48 @@ class Home : AppCompatActivity() {
             insets
         }
         call()
-        initNavigation()
+        observer()
     }
 
-    fun call(){
+    fun call() {
         viewmodel.getDogs()
     }
 
 
-    fun observer(){
-        viewmodel.data.observe(this){data->
+    private fun observer() {
+        viewmodel.data.observe(this) {
+            when (it) {
+                is State.Success -> {
+                    initRecyclerView(it.info.message ?: listOf())
+                }
 
+                is State.Loading -> {
+
+                }
+
+                is State.Error -> {
+
+                }
+            }
         }
     }
 
-    fun initRecyclerView(list: List<String>) {
+    private fun initRecyclerView(list: List<String>) {
 
         val adapter = HomeAdapter(list)
         binding.listaHome.adapter = adapter
 
 
     }
-
-
-
-    //navegacion a otras interfaces
-    private fun initNavigation() {
-        binding.boton2.setOnClickListener {
-            val intentPerritos = Intent(this, Perritos::class.java)
-            startActivity(intentPerritos)
-        }
-    }
 }
+
+//
+//
+//    //navegacion a otras interfaces
+//    private fun initNavigation() {
+//        binding.boton2.setOnClickListener {
+//            val intentPerritos = Intent(this, Perritos::class.java)
+//            startActivity(intentPerritos)
+//        }
+//    }
+//}

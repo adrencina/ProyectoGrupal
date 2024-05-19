@@ -16,9 +16,11 @@ class Perritos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         binding = ActivityPerritosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.perritos)) { v, insets ->
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.rv_perritos)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -32,9 +34,9 @@ class Perritos : AppCompatActivity() {
     }
 
     private fun initRecycler() {
-        binding.rvDogs.layoutManager = GridLayoutManager(this, 3)
+        binding.rvPerritos.layoutManager = GridLayoutManager(this, 3)
         val adapter = DogsAdapter(getList())
-        binding.rvDogs.adapter = adapter
+        binding.rvPerritos.adapter = adapter
     }
 
     private fun getList(): List<DogsData> {

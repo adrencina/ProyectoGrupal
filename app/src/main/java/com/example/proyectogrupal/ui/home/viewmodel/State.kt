@@ -4,8 +4,8 @@ import com.example.proyectogrupal.data.dto.response.HomeResponse
 
 sealed class State() {
 
-    data class Success (private val info: HomeResponse): State()
-    data class Error (private val message: String): State()
+    data class Success (val info: HomeResponse): State()
+    data class Error (val message: String): State()
     data object Loading : State()
 
 }

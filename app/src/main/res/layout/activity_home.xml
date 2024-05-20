@@ -39,7 +39,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <ImageView
         android:id="@+id/btn_aleatorio"
         android:layout_width="wrap_content"
@@ -47,7 +46,7 @@
         android:src="@drawable/circle_white_shape"
         android:layout_marginTop="41dp"
         android:padding="2dp"
-        app:layout_constraintEnd_toStartOf="@+id/boton2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_perritos"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"/>
 
     <TextView
@@ -62,7 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/btn_aleatorio" />
 
     <ImageView
-        android:id="@+id/boton2"
+        android:id="@+id/btn_perritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_black_shape"
@@ -73,19 +72,19 @@
         />
 
     <TextView
-        android:id="@+id/text_boton2"
+        android:id="@+id/text_perritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Perritos"
         android:textSize="16sp"
         android:textColor="@color/blanco"
-        app:layout_constraintBottom_toBottomOf="@+id/boton2"
-        app:layout_constraintEnd_toEndOf="@+id/boton2"
-        app:layout_constraintStart_toStartOf="@+id/boton2"
-        app:layout_constraintTop_toTopOf="@+id/boton2" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_perritos"
+        app:layout_constraintEnd_toEndOf="@+id/btn_perritos"
+        app:layout_constraintStart_toStartOf="@+id/btn_perritos"
+        app:layout_constraintTop_toTopOf="@+id/btn_perritos" />
 
     <ImageView
-        android:id="@+id/boton3"
+        android:id="@+id/btn_nosotros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_white_shape"
@@ -96,23 +95,23 @@
         />
 
     <TextView
-        android:id="@+id/text_boton3"
+        android:id="@+id/text_nosotros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nosotros"
         android:textSize="16sp"
         android:textColor="@color/negro"
-        app:layout_constraintBottom_toBottomOf="@+id/boton3"
-        app:layout_constraintEnd_toEndOf="@+id/boton3"
-        app:layout_constraintStart_toStartOf="@+id/boton3"
-        app:layout_constraintTop_toTopOf="@+id/boton3" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nosotros"
+        app:layout_constraintEnd_toEndOf="@+id/btn_nosotros"
+        app:layout_constraintStart_toStartOf="@+id/btn_nosotros"
+        app:layout_constraintTop_toTopOf="@+id/btn_nosotros" />
 
     <ImageView
         android:id="@+id/boton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_orange_shape"
-        app:layout_constraintStart_toEndOf="@+id/boton3"
+        app:layout_constraintStart_toEndOf="@+id/btn_nosotros"
         app:layout_constraintTop_toBottomOf="@+id/titleSearch"
         android:layout_marginTop="41dp"
         android:padding="2dp"

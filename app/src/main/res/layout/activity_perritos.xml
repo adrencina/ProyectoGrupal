@@ -102,8 +102,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_perritos"
         android:layout_width="320dp"
-        android:layout_height="410dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dl_30"

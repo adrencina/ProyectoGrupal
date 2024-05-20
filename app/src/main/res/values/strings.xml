@@ -3,6 +3,10 @@
     <string name="search">Buscar</string>
     <string name="adopt">Adoptar</string>
     <string name="proof_text">Cualquier dieta debe ser apropiada para el perro.años. Debe haber agua limpia y fresca disponible en todo momento.</string>
+    <string name="health_text">Realiza chequeos veterinarios regulares, mantén sus vacunas al día y administra antiparasitarios. El ejercicio y una dieta equilibrada también son esenciales para su bienestar.</string>
+    <string name="home_text">Asegúrate de que tenga un lugar propio para descansar, libre de corrientes de aire y con suficiente espacio. Mantén productos peligrosos fuera de su alcance y revisa regularmente su espacio para evitar accidentes.</string>
+    <string name="hobbies_text">Jugar a buscar, entrenar trucos, y socializar con otros perros son actividades recomendables. Recuerda variar las actividades para mantener a tu mascota estimulada y feliz</string>
+    <string name="tips">Presiona los botones para obtener más información</string>
     <string name="back">Volver</string>
     <string name="start">Comenzar</string>
     <string name="ups">Ups! no hay resultados</string>

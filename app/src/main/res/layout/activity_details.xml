@@ -66,6 +66,7 @@
             android:background="@drawable/circle_white_shape"
             android:scaleType="center"
             android:src="@drawable/feeder"
+
             app:layout_constraintEnd_toStartOf="@id/ivStethoscope"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivDog" />
@@ -115,7 +116,7 @@
             android:layout_height="0dp"
             android:gravity="center|start"
             app:layout_constraintBottom_toTopOf="@id/sBoton"
-            android:text="@string/proof_text"
+            android:text="@string/tips"
             android:textColor="@color/gris_texto"
             android:textSize="22sp"
             app:layout_constraintTop_toBottomOf="@id/ivFeeder" />

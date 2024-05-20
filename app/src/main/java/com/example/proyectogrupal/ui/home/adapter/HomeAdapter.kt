@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proyectogrupal.HomeData
 import com.example.proyectogrupal.R
 import com.example.proyectogrupal.databinding.CardImgBinding
 import com.squareup.picasso.Picasso

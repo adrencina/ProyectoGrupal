@@ -1,9 +1,9 @@
-package com.example.proyectogrupal
+package com.example.proyectogrupal.ui.home.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyectogrupal.DogsData
 import com.example.proyectogrupal.databinding.ItemGridDogsBinding
 import com.squareup.picasso.Picasso
 

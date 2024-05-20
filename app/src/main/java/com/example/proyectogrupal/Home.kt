@@ -16,7 +16,7 @@ class Home : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
-    val viewmodel by viewModels<HomeViewmodel>()
+    private val viewmodel by viewModels<HomeViewmodel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +32,72 @@ class Home : AppCompatActivity() {
         }
         call()
         observer()
+
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
+
+        binding.btnPerritos.setOnClickListener{
+            navPerritos()
+        }
+
+        binding.btnNosotros.setOnClickListener{
+            navNosotros()
+        }
+
+
+//
+//        binding.imgHome.setOnClickListener{
+//            navDetails()
+//        }
+
+//
+//        binding.boton4.setOnClickListener{
+//            navRandomdog()
+//        }
+
     }
 
-    fun call() {
+    private fun navRandomdog(){
+        val intent = Intent(this, RandomDog::class.java) //Para ir a random_dog.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navPerritos(){
+        val intent = Intent(this, Perritos::class.java) //Para ir a perritos.xml
+        startActivity(intent)
+        finish()
+    }
+
+//
+//    private fun navBuscar(){
+//        val intent = Intent(this, Buscar::class.java) //Para ir a Buscar.xml
+//        startActivity(intent)
+//        finish()
+//    }
+
+    private fun navNosotros(){
+        val intent = Intent(this, Nosotros::class.java) //Para ir a Nosotros.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navDetails(){
+        val intent = Intent(this, Details::class.java) //Para ir a Details.xml
+        startActivity(intent)
+        finish()
+    }
+
+
+
+    private fun call() {
         viewmodel.getDogs()
     }
+
+
+
+
 
 
     private fun observer() {
@@ -57,9 +118,6 @@ class Home : AppCompatActivity() {
         }
     }
 
-    fun navRandomDog(){
-        val intent = intent(this, Main)
-    }
 
     private fun initRecyclerView(list: List<String>) {
 

@@ -1,13 +1,16 @@
 package com.example.proyectogrupal
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.proyectogrupal.databinding.ActivityPerritosBinding
+import com.example.proyectogrupal.ui.home.adapter.DogsAdapter
 
 class Perritos : AppCompatActivity() {
 
@@ -26,18 +29,40 @@ class Perritos : AppCompatActivity() {
             insets
         }
 
-        //initUIA()
+
+        binding.botonDer.setOnClickListener(clickListener)
+        binding.botonIzq.setOnClickListener(clickListener)
+        binding.textoBoton.setOnClickListener(clickListener)
+        binding.iconoBoton.setOnClickListener(clickListener)
+
+        initUIA()
     }
 
-    /*private fun initUIA() {
-        initRecycler()
-    }*/
 
-   /* private fun initRecycler() {
+    private val clickListener = View.OnClickListener { view ->
+        when (view.id) {
+            R.id.boton_der, R.id.boton_izq, R.id.texto_boton, R.id.icono_boton -> {
+                navVolver()
+            }
+        }
+    }
+
+    private fun navVolver(){
+        val intent = Intent(this, Home::class.java) //Para volver a Home.xml
+        startActivity(intent)
+        finish()
+    }
+
+
+    private fun initUIA() {
+        initRecycler()
+    }
+
+    private fun initRecycler() {
         binding.rvPerritos.layoutManager = GridLayoutManager(this, 3)
         val adapter = DogsAdapter(getList())
         binding.rvPerritos.adapter = adapter
-    }*/
+    }
 
     private fun getList(): List<DogsData> {
         return listOf(

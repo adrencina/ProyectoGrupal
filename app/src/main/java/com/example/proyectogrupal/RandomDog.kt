@@ -2,6 +2,7 @@ package com.example.proyectogrupal
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,8 +28,25 @@ class RandomDog : AppCompatActivity() {
             insets
         }
 
+        binding.botonDer.setOnClickListener(clickListener)
+        binding.botonIzq.setOnClickListener(clickListener)
+        binding.textoBoton.setOnClickListener(clickListener)
+        binding.iconoBoton.setOnClickListener(clickListener)
 
     }
 
+    private val clickListener = View.OnClickListener { view ->
+        when (view.id) {
+            R.id.boton_der, R.id.boton_izq, R.id.texto_boton, R.id.icono_boton -> {
+                navVolver()
+            }
+        }
+    }
+
+    private fun navVolver(){
+        val intent = Intent(this, Home::class.java) //Para volver a Home.xml
+        startActivity(intent)
+        finish()
+    }
 
 }

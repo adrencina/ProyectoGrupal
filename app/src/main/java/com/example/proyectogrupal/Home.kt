@@ -45,6 +45,12 @@ class Home : AppCompatActivity() {
             navNosotros()
         }
 
+
+//
+//        binding.imgHome.setOnClickListener{
+//            navDetails()
+//        }
+
 //
 //        binding.boton4.setOnClickListener{
 //            navRandomdog()
@@ -73,6 +79,12 @@ class Home : AppCompatActivity() {
 
     private fun navNosotros(){
         val intent = Intent(this, Nosotros::class.java) //Para ir a Nosotros.xml
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navDetails(){
+        val intent = Intent(this, Details::class.java) //Para ir a Details.xml
         startActivity(intent)
         finish()
     }

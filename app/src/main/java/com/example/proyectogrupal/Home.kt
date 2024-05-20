@@ -37,18 +37,17 @@ class Home : AppCompatActivity() {
             navRandomdog()
         }
 
-        binding.btnPerritos.setOnClickListener{
-            navPerritos()
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
         }
 
-        binding.btnNosotros.setOnClickListener{
-            navNosotros()
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
         }
 
-//
-//        binding.boton4.setOnClickListener{
-//            navRandomdog()
-//        }
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
 
     }
 
@@ -64,19 +63,17 @@ class Home : AppCompatActivity() {
         finish()
     }
 
+    private fun navBuscar(){
+        val intent = Intent(this, Buscar::class.java) //Para ir a Buscar.xml
+        startActivity(intent)
+        finish()
+    }
 
     private fun navNosotros(){
         val intent = Intent(this, Nosotros::class.java) //Para ir a Nosotros.xml
         startActivity(intent)
         finish()
     }
-
-//
-//    private fun navBuscar(){
-//        val intent = Intent(this, Buscar::class.java) //Para ir a Buscar.xml
-//        startActivity(intent)
-//        finish()
-//    }
 
 
 

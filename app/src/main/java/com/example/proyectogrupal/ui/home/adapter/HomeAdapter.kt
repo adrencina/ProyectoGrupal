@@ -1,9 +1,11 @@
 package com.example.proyectogrupal.ui.home.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyectogrupal.Details
 import com.example.proyectogrupal.R
 import com.example.proyectogrupal.databinding.CardImgBinding
 import com.squareup.picasso.Picasso
@@ -23,9 +25,23 @@ class HomeAdapter(private val list: List<String>) : RecyclerView.Adapter<HomeVie
     }
 }
 
-class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
+class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+
+
     private val binding = CardImgBinding.bind(view)
+
+    init {
+        itemView.setOnClickListener(this)
+    }
     fun render(image: String){
         Picasso.get().load(image).into(binding.imgHome)
     }
+
+    override fun onClick(v: View?) {
+        val context = itemView.context
+        val intent = Intent(context, Details::class.java)
+        context.startActivity(intent)
+    }
+
+
 }

@@ -16,7 +16,7 @@ class Home : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
-    val viewmodel by viewModels<HomeViewmodel>()
+    private val viewmodel by viewModels<HomeViewmodel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +32,52 @@ class Home : AppCompatActivity() {
         }
         call()
         observer()
-        initNavigation()
+
+
+        binding.btnAleatorio.setOnClickListener{
+            navRandomdog()
+        }
+
+        binding.btnPerritos.setOnClickListener{
+            navPerritos()
+        }
+
+        binding.btnNosotros.setOnClickListener{
+            navNosotros()
+        }
+
+
+        binding.boton4.setOnClickListener{
+            navBuscar()
+        }
+
     }
 
-    fun call() {
+    private fun navRandomdog(){
+        val intent = Intent(this, RandomDog::class.java) //Para ir a random_dog.xml
+        startActivity(intent)
+    }
+
+    private fun navPerritos(){
+        val intent = Intent(this, Perritos::class.java) //Para ir a perritos.xml
+        startActivity(intent)
+    }
+
+
+    private fun navBuscar(){
+        val intent = Intent(this, Buscar::class.java) //Para ir a Buscar.xml
+        startActivity(intent)
+    }
+
+    private fun navNosotros(){
+        val intent = Intent(this, Nosotros::class.java) //Para ir a Nosotros.xml
+        startActivity(intent)
+    }
+
+
+    private fun call() {
         viewmodel.getDogs()
     }
-
 
     private fun observer() {
         viewmodel.data.observe(this) {
@@ -58,23 +97,12 @@ class Home : AppCompatActivity() {
         }
     }
 
+
     private fun initRecyclerView(list: List<String>) {
 
         val adapter = HomeAdapter(list)
         binding.listaHome.adapter = adapter
 
 
-    }
-
-
-
-    //navegacion a otras interfaces
-    private fun initNavigation() {
-
-
-        binding.boton4.setOnClickListener {
-            val intent = Intent(this, Buscar::class.java)
-            startActivity(intent)
-        }
     }
 }

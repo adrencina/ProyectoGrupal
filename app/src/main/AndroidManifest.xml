@@ -18,6 +18,9 @@
             android:name=".Details"
             android:exported="false" />
         <activity
+            android:name=".Nosotros"
+            android:exported="false" />
+        <activity
             android:name=".Buscar"
             android:exported="false" />
         <activity
@@ -25,6 +28,9 @@
             android:exported="false" />
         <activity
             android:name=".Perritos"
+            android:exported="false" />
+        <activity
+            android:name=".RandomDog"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

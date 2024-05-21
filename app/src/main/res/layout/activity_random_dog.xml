@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="33dp"
         android:text="Search"
         android:textSize="36sp"
         android:textStyle="normal"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="Search"
         android:textSize="36sp"
         android:textStyle="normal"
@@ -40,7 +40,7 @@
         android:id="@+id/titleFriend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="33dp"
         android:layout_marginStart="3dp"
         android:fontFamily="@font/robotobold"
         android:text="Friend"
@@ -55,7 +55,7 @@
         android:id="@+id/titleFriend_shadow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="5dp"
         android:fontFamily="@font/robotobold"
         android:text="Friend"
@@ -70,7 +70,6 @@
         android:layout_width="51dp"
         android:layout_height="54dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
         android:src="@drawable/logo_pata"
         app:layout_constraintBottom_toTopOf="@+id/dl_30"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -85,10 +84,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="343dp"
-        android:layout_height="443dp"
-        android:src="@drawable/logo_pata"
-        android:layout_marginTop="20dp"
+        android:layout_width="320dp"
+        android:layout_height="430dp"
+        android:src="@drawable/rounded_corner_card"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dl_30" />
@@ -107,21 +106,30 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dl_95"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
     <Button
         android:id="@+id/boton_der"
-        android:layout_width="240dp"
+        android:layout_width="210dp"
         android:layout_height="67dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_corner_white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/dl_95"
         app:layout_constraintEnd_toStartOf="@+id/dl_90"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/boton_izq"
-        android:layout_width="240dp"
+        android:layout_width="210dp"
         android:layout_height="74dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/negro"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/dl_95"
         app:layout_constraintStart_toStartOf="@+id/dl_10"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 

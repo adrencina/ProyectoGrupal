@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface HomeService {
-    @GET("breeds/image/random/50")
+    @GET("breeds/image/random/10")
    suspend fun getDogs(): Response<HomeResponse>
 }

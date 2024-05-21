@@ -41,7 +41,7 @@ class DogsAdapter(private val list: List<DogsData>) : RecyclerView.Adapter<DogsA
         override fun onClick(v: View?) {
             val context = itemView.context
             val intent = Intent(context, Details::class.java)
-            intent.putExtra("DOG_ID", data.id) // assuming `id` is a property of `DogsData`
+            intent.putExtra("IMAGE_URL", data.url) // assuming `id` is a property of `DogsData`
             context.startActivity(intent)
         }
 

@@ -33,7 +33,13 @@ class Details : AppCompatActivity() {
         }
 
         val imageUrl = intent.getStringExtra("IMAGE_URL")
-        Picasso.get().load(imageUrl).into(binding.ivDogBackground)
+        if (imageUrl != null && imageUrl.isNotEmpty()) {
+            Picasso.get().load(imageUrl).into(binding.ivDogBackground)
+        } else {
+            // Maneja el caso donde la URL de la imagen es nula o vacía
+            // Puedes mostrar una imagen por defecto o un mensaje de error
+            binding.ivDogBackground.setImageResource(R.drawable.dog_api)
+        }
 
 
         initUIA()

@@ -106,8 +106,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dl_30"
-        android:background="@drawable/rounded_corner_card"/>
+        app:layout_constraintTop_toTopOf="@+id/dl_30"/>
 
 
     <androidx.constraintlayout.widget.Guideline

@@ -14,7 +14,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.proyectogrupal.databinding.ActivityBuscarBinding
 import com.example.proyectogrupal.ui.home.viewmodel.BuscarViewModel
 import com.example.proyectogrupal.ui.home.viewmodel.StateBuscar
+import com.ncorti.slidetoact.SlideToActView
 import com.squareup.picasso.Picasso
+
 
 class Buscar : AppCompatActivity() {
 
@@ -36,12 +38,22 @@ class Buscar : AppCompatActivity() {
 
 
         initUIA()
+
+        binding.sBoton.onSlideCompleteListener = object : SlideToActView.OnSlideCompleteListener {
+            override fun onSlideComplete(view: SlideToActView) {
+                val intent = Intent(this@Buscar, Home::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
 
     private fun initUIA() {
         configurarSearchView()
         observer()
+
+
     }
 
 

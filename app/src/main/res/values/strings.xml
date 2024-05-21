@@ -8,6 +8,8 @@
     <string name="hobbies_text">Jugar a buscar, entrenar trucos, y socializar con otros perros son actividades recomendables. Recuerda variar las actividades para mantener a tu mascota estimulada y feliz</string>
     <string name="tips">Presiona los botones para obtener más información</string>
     <string name="back">Volver</string>
+    <string name="back_home">Volver al inicio</string>
     <string name="start">Comenzar</string>
     <string name="ups">Ups! no hay resultados</string>
+    <string name="thanks">Gracias a ti, Lucky tiene un hogar!</string>
 </resources>

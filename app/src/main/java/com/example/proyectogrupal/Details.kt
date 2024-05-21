@@ -1,5 +1,6 @@
 package com.example.proyectogrupal
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +13,7 @@ import androidx.core.widget.ImageViewCompat
 import androidx.lifecycle.Observer
 import com.example.proyectogrupal.databinding.ActivityDetailsBinding
 import com.example.proyectogrupal.ui.home.viewmodel.DetailsViewModel
+import com.ncorti.slidetoact.SlideToActView
 import com.squareup.picasso.Picasso
 
 class Details : AppCompatActivity() {
@@ -36,6 +38,29 @@ class Details : AppCompatActivity() {
 
         initUIA()
 
+        initListeners()
+
+
+
+    }
+
+    private fun initListeners() {
+        binding.sBoton.onSlideCompleteListener = object : SlideToActView.OnSlideCompleteListener {
+            override fun onSlideComplete(view: SlideToActView) {
+                val intent = Intent(this@Details, Home::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
+        binding.tvAdopt.setOnClickListener {
+            val intent = Intent(this, Thanks::class.java)
+            startActivity(intent)
+        }
+        binding.ivDog.setOnClickListener {
+            val intent = Intent(this, Thanks::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initUIA() {

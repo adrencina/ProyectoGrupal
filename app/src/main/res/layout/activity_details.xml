@@ -1,13 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/details"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Details">
 
+    <ImageView
+        android:id="@+id/ivDogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/perro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_corner_card"
+        android:backgroundTint="@color/blanco"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline">
+
+        <TextView
+            android:id="@+id/tvAdopt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotobold"
+            android:gravity="end"
+            android:text="@string/adopt"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toStartOf="@id/ivDog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/dogface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAdopt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivFeeder"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_white_shape"
+            android:scaleType="center"
+            android:src="@drawable/feeder"
+
+            app:layout_constraintEnd_toStartOf="@id/ivStethoscope"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivDog" />
+
+        <ImageView
+            android:id="@+id/ivStethoscope"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_white_shape"
+            android:scaleType="center"
+            android:src="@drawable/stethoscope"
+            app:layout_constraintStart_toEndOf="@id/ivFeeder"
+            app:layout_constraintTop_toBottomOf="@id/ivDog" />
+
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_white_shape"
+            android:scaleType="center"
+            android:src="@drawable/home"
+            app:layout_constraintStart_toEndOf="@id/ivStethoscope"
+            app:layout_constraintTop_toBottomOf="@id/ivDog" />
+
+        <ImageView
+            android:id="@+id/ivPaw"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_white_shape"
+            android:scaleType="center"
+            android:src="@drawable/paw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivHome"
+            app:layout_constraintTop_toBottomOf="@id/ivDog" />
+
+
+        <TextView
+            android:id="@+id/etDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center|start"
+            app:layout_constraintBottom_toTopOf="@id/sBoton"
+            android:text="@string/tips"
+            android:textColor="@color/gris_texto"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@id/ivFeeder" />
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/sBoton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="3dp"
+            app:area_margin="0dp"
+            app:inner_color="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:outer_color="@color/blanco"
+            app:text="@string/back"
+            app:text_size="20sp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

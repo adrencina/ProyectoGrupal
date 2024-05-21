@@ -1,8 +1,11 @@
 package com.example.proyectogrupal.ui.home.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyectogrupal.Details
 import com.example.proyectogrupal.DogsData
 import com.example.proyectogrupal.databinding.ItemGridDogsBinding
 import com.squareup.picasso.Picasso
@@ -22,9 +25,25 @@ class DogsAdapter(private val list: List<DogsData>) : RecyclerView.Adapter<DogsA
         holder.render(list[position])
     }
 
-    class DogsHolder(private val binding: ItemGridDogsBinding) : RecyclerView.ViewHolder(binding.root) {
+    class DogsHolder(private val binding: ItemGridDogsBinding) : RecyclerView.ViewHolder(binding.root),
+        View.OnClickListener {
+        private lateinit var data: DogsData
+
+        init {
+            itemView.setOnClickListener(this)
+        }
         fun render(data: DogsData) {
+            this.data = data
             Picasso.get().load(data.url).into(binding.ivDog)
         }
+
+
+        override fun onClick(v: View?) {
+            val context = itemView.context
+            val intent = Intent(context, Details::class.java)
+            intent.putExtra("DOG_ID", data.id) // assuming `id` is a property of `DogsData`
+            context.startActivity(intent)
+        }
+
     }
 }

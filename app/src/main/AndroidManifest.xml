@@ -18,7 +18,7 @@
             android:name=".Details"
             android:exported="false" />
         <activity
-            android:name=".nosotros"
+            android:name=".Nosotros"
             android:exported="false" />
         <activity
             android:name=".Buscar"

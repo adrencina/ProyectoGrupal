@@ -67,6 +67,18 @@ class Perritos : AppCompatActivity() {
     private fun getList(): List<DogsData> {
         return listOf(
             DogsData(url="https://th.bing.com/th/id/R.df756a251a62d8fb09b9cf66711c1c09?rik=SKtoKItSIRDsqQ&riu=http%3a%2f%2fcms.softindustries.com%2fmultimedia%2f12%2f200808%2fBichon-maltes_1_2.jpg&ehk=Gd8ncrL%2ffQ5KRPk3D5iiXPywZz1Ih8YwBHfkzAM8z8E%3d&risl=&pid=ImgRaw&r=0", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/terrier-american/n02093428_13615.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/schnauzer-giant/n02097130_1254.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/hound-blood/n02088466_10773.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/leonberg/n02111129_4246.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/hound-english/n02089973_3688.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/terrier-westhighland/n02098286_751.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/papillon/n02086910_7842.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/bluetick/n02088632_2174.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/saluki/n02091831_3067.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/pinscher-miniature/n02107312_1520.jpg", id = "hola"),
+            DogsData(url="https://images.dog.ceo/breeds/labrador/n02099712_3988.jpg", id = "hola"),
+
 
         )
     }

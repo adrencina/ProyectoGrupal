@@ -29,17 +29,20 @@ class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view), Vi
 
 
     private val binding = CardImgBinding.bind(view)
+    private var url =""
 
     init {
         itemView.setOnClickListener(this)
     }
     fun render(image: String){
         Picasso.get().load(image).into(binding.imgHome)
+        url = image
     }
 
     override fun onClick(v: View?) {
         val context = itemView.context
         val intent = Intent(context, Details::class.java)
+        intent.putExtra("IMAGE_URL", url)
         context.startActivity(intent)
     }
 
